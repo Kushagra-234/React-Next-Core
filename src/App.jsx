@@ -1,3 +1,4 @@
+import Accordian from "./components/Accordian";
 import Counter from "./components/Counter";
 import InputBoxControlled from "./components/InputFilterList";
 import InputFilterList from "./components/InputFilterList";
@@ -27,7 +28,8 @@ const App = () => {
       {/* <TodoApp /> */}
       {/* <InputFilterList /> */}
       {/* <InputBoxControlled /> */}
-      <Paginated/>
+      {/* <Paginated/> */}
+      <Accordian />
     </div>
   );
 };
