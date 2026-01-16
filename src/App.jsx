@@ -1,6 +1,7 @@
 import Counter from "./components/Counter";
 import InputBoxControlled from "./components/InputFilterList";
 import InputFilterList from "./components/InputFilterList";
+import Paginated from "./components/Pagination";
 import StopWatch from "./components/StopWatch";
 import TodoApp from "./components/Todo";
 // import TodoList from "./components/Todo";
@@ -25,7 +26,8 @@ const App = () => {
       {/* <StopWatch /> */}
       {/* <TodoApp /> */}
       {/* <InputFilterList /> */}
-      <InputBoxControlled />
+      {/* <InputBoxControlled /> */}
+      <Paginated/>
     </div>
   );
 };
