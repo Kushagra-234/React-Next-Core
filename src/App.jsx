@@ -1,8 +1,11 @@
 import Accordian from "./components/Accordian";
+import Comments from "./components/Comments";
+import CommentTree from "./components/CommentTree";
 import Counter from "./components/Counter";
 import InputBoxControlled from "./components/InputFilterList";
 import InputFilterList from "./components/InputFilterList";
 import Paginated from "./components/Pagination";
+import RecursiveTree from "./components/RecursiveTree";
 import StopWatch from "./components/StopWatch";
 import TodoApp from "./components/Todo";
 // import TodoList from "./components/Todo";
@@ -29,7 +32,10 @@ const App = () => {
       {/* <InputFilterList /> */}
       {/* <InputBoxControlled /> */}
       {/* <Paginated/> */}
-      <Accordian />
+      {/* <Accordian /> */}
+      {/* <RecursiveTree /> */}
+      {/* <CommentTree /> */}
+      <Comments />
     </div>
   );
 };
