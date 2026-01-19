@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ChecboxComp = ({ data, checkBoxState, setCheckBoxState }) => {
+const CheckboxComp = ({ data, checkBoxState, setCheckBoxState }) => {
+  const [inputValue, setInputValue] = useState("");
   const isChecked = checkBoxState[data.id] ? true : false;
 
   const handleChange = () => {
@@ -8,18 +9,22 @@ const ChecboxComp = ({ data, checkBoxState, setCheckBoxState }) => {
     newObj[data.id] = !isChecked;
     setCheckBoxState(newObj);
   };
-
   return (
     <div className="ml-3">
       <label>
-        <input type="checkbox" checked={isChecked} onChange={handleChange} />
+        <input
+          onChange={handleChange}
+          value={inputValue}
+          checked={isChecked}
+          type="checkbox"
+        />
+
         {data.label}
         {data.children &&
-          data.children.map((child) => {
+          data.children.map((r) => {
             return (
-              <ChecboxComp
-                key={child.id}
-                data={child}
+              <CheckboxComp
+                data={r}
                 checkBoxState={checkBoxState}
                 setCheckBoxState={setCheckBoxState}
               />
@@ -30,4 +35,4 @@ const ChecboxComp = ({ data, checkBoxState, setCheckBoxState }) => {
   );
 };
 
-export default ChecboxComp;
+export default CheckboxComp;

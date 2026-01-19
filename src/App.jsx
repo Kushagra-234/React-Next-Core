@@ -33,9 +33,9 @@ const App = () => {
       {/* <InputBoxControlled /> */}
       {/* <Paginated/> */}
       {/* <Accordian /> */}
-      {/* <RecursiveTree /> */}
+      <RecursiveTree />
       {/* <CommentTree /> */}
-      <Comments />
+      {/* <Comments /> */}
     </div>
   );
 };
