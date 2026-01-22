@@ -6,6 +6,11 @@ const accordionData = [
   { id: 3, title: "What is Props?", content: "Props pass data to components." },
 ];
 
+
+// accoridan me pehele accordian data 
+// fir accordian ko render krna 
+// fir handlecick meif openId===id then setOpenId(null) else set it id
+
 const Accordian = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const handleCLick = (id: number) => {

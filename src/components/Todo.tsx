@@ -1,66 +1,51 @@
 import React, { useState } from "react";
 
 const TodoApp = () => {
-  const [inputValue, setInputValue] = useState("");
-  const [todo, setTodo] = useState<string[]>([]);
+  const [inputValue, setInputVaue] = useState("");
+  const [todos, setTodos] = useState<string[]>([]);
   const [editIndex, setEditIndex] = useState(null);
-
-  const handleChange = (e) => {
-    setInputValue(e.target.value);
-  };
 
   const handleAdd = () => {
     if (editIndex !== null) {
-      const updatedArr = [...todo];
-      updatedArr[editIndex] = inputValue;
-      setTodo(updatedArr);
+      const tempArray = [...todos];
+      tempArray[editIndex] = inputValue;
+      setTodos(tempArray);
       setEditIndex(null);
     } else {
-      setTodo([...todo, inputValue]);
+      setTodos([...todos, inputValue]);
     }
-    setInputValue("");
+    setInputVaue("");
   };
-
-  const handleDelete = (index) => {
-    const newArr = todo.filter((i, indexNew) => {
-      return indexNew !== index;
+  const handleDelete = (id) => {
+    const newArr = todos.filter((i, idx) => {
+      return idx !== id;
     });
 
-    setTodo(newArr);
+    setTodos(newArr);
   };
 
-  const handleEdit = (index) => {
-    setInputValue(todo[index]);
-    setEditIndex(index);
+  const handleEdit = (id) => {
+    setEditIndex(id);
+    setInputVaue(todos[id]);
   };
   return (
-    <div className="w-full flex items-center justify-center flex-col h-full">
-      <h1>Todo-APP</h1>
-      <div>
+    <div className="w-full flex flex-col">
+      <div>Todo APP</div>
+      <div className="flex gap-3">
         <input
+          className="border-2 w-64"
           value={inputValue}
-          onChange={(e) => handleChange(e)}
-          className="w-64 h-10 border-4"
+          onChange={(e) => setInputVaue(e.target.value)}
         />
-        <button
-          onClick={handleAdd}
-          className="w-10 border-2 cursor-pointer h-10 ml-5"
-        >
-          +
-        </button>
+        <button onClick={handleAdd}>+</button>
       </div>
-
       <div>
-        {todo.map((items, index) => {
+        {todos.map((item, id) => {
           return (
-            <div className="flex gap-2">
-              {items}
-              <button onClick={() => handleDelete(index)} className="">
-                -
-              </button>
-              <button onClick={() => handleEdit(index)} className="">
-                Edit
-              </button>
+            <div className="flex gap-3">
+              {item}
+              <button onClick={() => handleDelete(id)}>delete</button>
+              <button onClick={() => handleEdit(id)}>Edit</button>
             </div>
           );
         })}

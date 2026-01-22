@@ -41,3 +41,15 @@ const callfun = greet.call(user, "delhi");
 const callfunAPply = greet.apply(user, ["delhi"]);
 const callfunBind = greet.bind(user, "delhi");
 callfunBind();
+
+
+const debounce(fn,delay){
+    const timerid;
+
+    return function(...args){
+        timerid =setTimeout(()=>{
+            fn.apply(args,this);
+
+        },delay)
+    }
+}
