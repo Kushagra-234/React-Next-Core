@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const accordionData = [
   {
@@ -21,8 +21,44 @@ const accordionData = [
   },
 ];
 
+// render krao accoridandata ko
+// openid shuru me null agar openID barabar ho id ke jo pass ho rhi hai to setOpenId(null)
+// setOpenId(id);
+
+// multiple accordians ko open krna hai
+
+// dekho approach ye hai ki openId ko ek array bna do agar multiple render krane hai to []
+// aur agr click hua uspe to agr openId empty hai to bhar do usme wo id aur agar phle se hai to remove kr do
+
 const AccordianSec = () => {
-  return <div className="flex gap-2"></div>;
+  const [openId, setOpenId] = useState<any[]>([]);
+
+  const handleClick = (id) => {
+    setOpenId((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+  return (
+    <div className="flex w-full h-full justify-center items-center flex-col gap-2">
+      <h3>Accordian</h3>
+      <div>
+        {accordionData.map((accordItem, id) => {
+          return (
+            <div key={accordItem.id} className="flex flex-col gap-4">
+              <div className=" flex gap-4">
+                {accordItem.title}
+                <button onClick={() => handleClick(id)}>
+                  {" "}
+                  {openId.includes(id) ? "▼" : "▶"}
+                </button>
+              </div>
+              <div>{openId.includes(id) && accordItem?.content}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default AccordianSec;
