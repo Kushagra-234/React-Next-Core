@@ -1,23 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useDeb } from "./useDeb";
 
 const InputFilterListSec = () => {
   const data = ["mango", "apple", "papaya", "lichie", "banana"];
   const [inputVal, setInputVal] = useState("");
-  const [debouncedValue, setDebouncedValue] = useState("");
+  // const [debouncedValue, setDebouncedValue] = useState("");
+
+  const { debouncedValue } = useDeb(inputVal, 300);
 
   const handleChange = (e) => {
     setInputVal(e.target.value);
   };
-
-  useEffect(() => {
-    let timerId;
-
-    timerId = setTimeout(() => {
-      setDebouncedValue(inputVal);
-    }, 300);
-
-    return () => clearTimeout(timerId);
-  }, [inputVal]);
 
   const filteredArray = data.filter((fruits) => {
     return fruits.toLowerCase().includes(debouncedValue.toLowerCase() ?? "");

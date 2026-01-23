@@ -5,6 +5,7 @@ import Counter from "./components/Counter";
 import InputBoxControlled from "./components/InputFilterList";
 import InputFilterList from "./components/InputFilterList";
 import AccordianSec from "./components/InterviewLevel/AccordianSec";
+import InfiniteScroll from "./components/InterviewLevel/InfiniteScroll";
 import InputFilterListSec from "./components/InterviewLevel/InputFilterListSec";
 import StopWatchSec from "./components/InterviewLevel/StopWatchSec";
 import Paginated from "./components/Pagination";
@@ -29,7 +30,8 @@ const App = () => {
   return (
     <div className="w-full  h-screen">
       {/* <StopWatchSec /> */}
-      <InputFilterListSec />
+      <InfiniteScroll/>
+      {/* <InputFilterListSec /> */}
       {/* <AccordianSec /> */}
       {/* hello */}
       {/* <Counter /> */}
