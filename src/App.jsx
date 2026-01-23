@@ -5,6 +5,7 @@ import Counter from "./components/Counter";
 import InputBoxControlled from "./components/InputFilterList";
 import InputFilterList from "./components/InputFilterList";
 import AccordianSec from "./components/InterviewLevel/AccordianSec";
+import InputFilterListSec from "./components/InterviewLevel/InputFilterListSec";
 import StopWatchSec from "./components/InterviewLevel/StopWatchSec";
 import Paginated from "./components/Pagination";
 import RecursiveTree from "./components/RecursiveTree";
@@ -28,7 +29,8 @@ const App = () => {
   return (
     <div className="w-full  h-screen">
       {/* <StopWatchSec /> */}
-      <AccordianSec />
+      <InputFilterListSec />
+      {/* <AccordianSec /> */}
       {/* hello */}
       {/* <Counter /> */}
       {/* <StopWatch /> */}
