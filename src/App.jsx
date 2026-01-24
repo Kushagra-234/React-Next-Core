@@ -7,6 +7,7 @@ import InputFilterList from "./components/InputFilterList";
 import AccordianSec from "./components/InterviewLevel/AccordianSec";
 import InfiniteScroll from "./components/InterviewLevel/InfiniteScroll";
 import InputFilterListSec from "./components/InterviewLevel/InputFilterListSec";
+import PaginationSec from "./components/InterviewLevel/PaginationSec";
 import StopWatchSec from "./components/InterviewLevel/StopWatchSec";
 import Paginated from "./components/Pagination";
 import RecursiveTree from "./components/RecursiveTree";
@@ -30,7 +31,8 @@ const App = () => {
   return (
     <div className="w-full  h-screen">
       {/* <StopWatchSec /> */}
-      <InfiniteScroll/>
+      <PaginationSec />
+      {/* <InfiniteScroll/> */}
       {/* <InputFilterListSec /> */}
       {/* <AccordianSec /> */}
       {/* hello */}

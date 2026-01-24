@@ -1,0 +1,46 @@
+q- redux ki functionality kaise bnegi 
+
+1-sabse pehle redux store bnaenge ham - ek single source of truth jo ki global state hai yahi store sab manage krega
+2- uske baad ek aisa function jo puri app me iski state ko supply kre basically getter function jo state laane ka kaam krta ho sirf 
+3- third ek setState iska kaam hoga state ko update krna ye couple krega oriignal state,aur partial changes ko aur store ki state manipulate krega 
+4- NOtify all components using listeners jo subscribe kre baithe hai ,isme components subscribe krte hai global state ko and listen krte rhte hai and jaise hi setState se change hogi state waise hi sab components ko notify ho jaega kyuki listner lage baithe hai
+ 
+
+
+ 1️⃣ Store
+
+Ek global store banate hain jo single source of truth hota hai
+
+Puri application ki state yahin hoti hai
+
+2️⃣ Getter
+
+Store ki state ko directly mutate nahi karte
+
+Sirf ek getter function expose karte hain jo current state read kare
+
+3️⃣ Action-based update (important word)
+
+State directly update nahi hoti
+
+Hum action dispatch karte hain jo batata hai:
+
+kya change chahiye
+
+kis data ke saath
+
+4️⃣ Reducer
+
+Reducer ek pure function hota hai
+
+(state, action) => newState
+
+Yahin immutably old state + changes merge hote hain
+
+5️⃣ Notify subscribers
+
+Jaise hi state update hoti hai
+
+Store sab subscribed components ko notify karta hai
+
+Components re-render with latest state

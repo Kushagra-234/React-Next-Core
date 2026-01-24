@@ -1,0 +1,13 @@
+ why we chose nextjs over reactjs 
+
+ We chose Next.js over plain React because in Web3 DApps the JavaScript bundle is already heavy due to wallet logic and RPC interactions.
+
+With React CSR, the initial HTML is empty and the UI waits for the entire JS bundle to load, which affects the first render.
+
+Next.js allowed us to server-render the UI and fetch non-wallet-dependent blockchain data like chain metadata, token configs, and public contract reads using viem.
+
+Wallet-specific logic such as account state and balances was kept in client-side components using wagmi, so it didn’t block the initial render.
+
+This separation helped reduce the initial JS workload and improved perceived performance.
+
+Additionally, file-based routing, API routes, and less boilerplate helped us ship features faster compared to setting up everything manually in React.
