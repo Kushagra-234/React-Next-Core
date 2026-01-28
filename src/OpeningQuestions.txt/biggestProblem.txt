@@ -1,0 +1,17 @@
+Since I work in a Web3 startup, our application heavily depends on asynchronous data like wallet connections, RPC calls, and on-chain reads and writes.
+
+Initially, this caused a lot of UI issues — components were managing their own async logic, which made the app laggy and state updates inconsistent.
+
+To solve this, I proposed and implemented a centralized API layer, where all data-fetching and blockchain interaction logic was moved out of components.
+
+On top of that, we created custom hooks for on-chain reads and writes, which helped standardize data flow and ensured UI state stayed in sync across the app.
+
+This significantly reduced bugs related to stale state, improved performance, and made the codebase much easier to maintain and scale.
+
+
+how did it solve problem and increased performance 
+Prop drilling was causing unnecessary re-renders due to nested async data. RTK Query isolated updates at the query level, so only dependent components re-rendered when their data changed.
+also rtk query caches data ,badges updates and thus reudces re-renders 
+
+
+okay if multiple components call same query tb component A calls it and then store me cache ho jaata hai and used by component B and component C
