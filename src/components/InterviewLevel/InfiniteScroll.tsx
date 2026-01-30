@@ -1,63 +1,37 @@
-// jaise hi window ke end pe aajae scroll krwa do
-// uss scroll pe page bhi change krdo uss hisaab se data load hona chahiye
-// mtlb jab tk window end nhi hui page 1 and jab scoll ho gyi page 2
+import React, { useState } from "react";
 
-import React, { useEffect, useState } from "react";
-
-const ALL_DATA = Array.from({ length: 50 }, (_, i) => ({
+export const users = Array.from({ length: 30 }, (_, i) => ({
   id: i + 1,
-  title: `Item ${i + 1}`,
+  name: `User ${i + 1}`,
+  email: `user${i + 1}@gmail.com`,
 }));
 
-const ITEMS_PER_PAGE = 10;
+const PaginationSec = () => {
+  const [curPage, setPage] = useState(1);
+  const ITEMS_PER_PAGE = 10;
 
-const InfiniteScroll = () => {
-  const [page, setPage] = useState(1);
-  const [result, setResult] = useState<any[]>([]);
-  const [hasMore, setHasMore] = useState(true);
+  const totalPages = Math.ceil(users.length / ITEMS_PER_PAGE);
+  const data = users.slice(0, curPage * ITEMS_PER_PAGE);
 
-  const getData = (pageNaya) => {
-    const start = (pageNaya - 1) * ITEMS_PER_PAGE;
-    const end = start + ITEMS_PER_PAGE;
-    return ALL_DATA.slice(start, end);
+  const handleScroll = (e) => {
+    const { scrollHeight, clientHeight, scrollTop } = e.target;
+
+    if (scrollTop + clientHeight >= scrollHeight - 50 && curPage < totalPages) {
+      setPage((prev) => prev + 1);
+    }
   };
 
-  useEffect(() => {
-    const returnedArr = getData(page);
-    setResult([...result, ...returnedArr]);
-
-    if (returnedArr.length === 0) {
-      setHasMore(false);
-    }
-  }, [page]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const { clientHeight, scrollTop, scrollHeight } =
-        document.documentElement;
-      //   clientHeight screen height
-      //   scrollTop kitna upar se scroll kiya
-
-      if (scrollTop + clientHeight >= scrollHeight - 50 && hasMore) {
-        setPage((prev) => prev + 1);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [hasMore]);
-
   return (
-    <div className="w-full flex flex-col">
-      <div>Infinite scroll</div>
-      <div>
-        {result.map((item) => {
-          return <div>{item?.title}</div>;
-        })}
-      </div>
+    <div
+      onScroll={handleScroll}
+      className="border-2 w-full h-[200px] overflow-y-auto p-2"
+    >
+      {data.map((user) => (
+        <div key={user.id}>{user.name}</div>
+      ))}
+      {curPage <= totalPages && <div>Load moew </div>}
     </div>
   );
 };
 
-export default InfiniteScroll;
+export default PaginationSec;

@@ -54,11 +54,11 @@ const CommentTree = () => {
     <div>
       {commentsData.map((node) => {
         return (
-          <CommentInput
-            data={node}
-            commentVal={commentVal}
-            setCommentVal={setCommentVal}
-          />
+          // <CommentInput
+          //   data={node}
+          //   commentVal={commentVal}
+          //   setCommentVal={setCommentVal}
+          // />
         );
       })}
     </div>
