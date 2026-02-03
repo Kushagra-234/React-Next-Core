@@ -12,6 +12,9 @@ function NewHUN(a) {
   };
 }
 
+// used for partial calling 
+// api call me ek cheez fix krne ke liye 
+
 NewHUN(1)(2)(3)(4);
 
 function curry(fn) {

@@ -13,6 +13,10 @@ const PaginationSec = () => {
   const totalPages = Math.ceil(users.length / ITEMS_PER_PAGE);
   const data = users.slice(0, curPage * ITEMS_PER_PAGE);
 
+  // handleScroll = () =>{
+  //   const { clientHeight, scrollHeight, scrollTop } = document.documentElement;
+  // }
+
   const handleScroll = (e) => {
     const { scrollHeight, clientHeight, scrollTop } = e.target;
 

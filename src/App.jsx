@@ -21,6 +21,10 @@ import TodoApp from "./components/Todo";
 import Nested from "./components/InterviewLevel/Nested";
 // import TodoList from "./components/Todo";
 import NestedCommentSec from "./components/NestedCommentSec";
+import CountDownTimer from "./components/CountDownTimer";
+import Explorer from "./components/Explorer";
+import Explorer2 from "./components/Explorer2";
+import Comments3 from "./components/Comments3";
 
 // Todo with edit + delete
 
@@ -38,7 +42,11 @@ const App = () => {
   return (
     <div className="w-full  h-screen">
       {/* <StopWatchSec /> */}
-      <NestedCommentSec />
+      <Comments3 />
+      {/* <Explorer2 /> */}
+      {/* <Explorer /> */}
+      {/* <CountDownTimer /> */}
+      {/* <NestedCommentSec /> */}
       {/* <RecuriveTreeDataAccoridan /> */}
       {/* <Nested /> */}
       {/* <RecursiveTreeDataSec /> */}
