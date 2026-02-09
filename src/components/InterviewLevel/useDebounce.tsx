@@ -12,7 +12,7 @@ function debounce(fn, delay) {
   };
 }
 
-const debouncedSearch = debounce(searchApi, 300);
+// const debouncedSearch = debounce(searchApi, 300);
 
 const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
@@ -40,10 +40,10 @@ function promisify(fn) {
   };
 }
 
-const promiseNew = promisify(fn);
-promiseNew(1, 3, 4).then((data) => {
-  console.log(data);
-});
+// const promiseNew = promisify(fn);
+// promiseNew(1, 3, 4).then((data) => {
+//   console.log(data);
+// });
 
 // function currring ek aisi process hai jisme ham ek function jo multiple params leta hai uski bajai usko tod lete hai in multiple
 // functions which all take single argument
@@ -52,7 +52,7 @@ function add(a, b, c) {
   return a + b + c;
 }
 
-function add(a) {
+function add2(a) {
   return function (b) {
     return a + b;
   };
@@ -72,7 +72,7 @@ api("/users")({ method: "get" });
 // currying used in nextjs auth middleware
 // sending a prefilled value for something like calling a api call and passinf baseURL from upfront
 
-function add(a, b, c) {
+function add1(a, b, c) {
   return a + b + c;
 }
 
@@ -86,9 +86,9 @@ function addNew(a) {
   };
 }
 
-const nayabanda = addNew(a)(b)(c);
+// const nayabanda = addNew(a)(b)(c);/
 
-function curry(fn) {
+function curryq(fn) {
   return function curried(...args) {
     if (args.length >= fn.length) {
       return fn(...args);

@@ -28,6 +28,8 @@ import Comments3 from "./components/Comments3";
 import TabsSection from "./components/InterviewLevel/TabsSection";
 import FileExplorer from "./components/FileExplorer";
 import APIFetch from "./components/InterviewLevel/APIFetch";
+import PaginationSwiggy from "./components/InterviewLevel/PaginationSwiggy";
+import AutoCompleteSwiggy from "./components/InterviewLevel/AutoCompleteSwiggy";
 
 // Todo with edit + delete
 
@@ -44,7 +46,9 @@ import APIFetch from "./components/InterviewLevel/APIFetch";
 const App = () => {
   return (
     <div className="w-full  h-screen">
-      <APIFetch />
+      <AutoCompleteSwiggy/>
+      {/* <PaginationSwiggy/> */}
+      {/* <APIFetch /> */}
       {/* <FileExplorer /> */}
       {/* <TabsSection /> */}
       {/* <StopWatchSec /> */}
