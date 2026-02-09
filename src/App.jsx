@@ -25,6 +25,9 @@ import CountDownTimer from "./components/CountDownTimer";
 import Explorer from "./components/Explorer";
 import Explorer2 from "./components/Explorer2";
 import Comments3 from "./components/Comments3";
+import TabsSection from "./components/InterviewLevel/TabsSection";
+import FileExplorer from "./components/FileExplorer";
+import APIFetch from "./components/InterviewLevel/APIFetch";
 
 // Todo with edit + delete
 
@@ -41,8 +44,11 @@ import Comments3 from "./components/Comments3";
 const App = () => {
   return (
     <div className="w-full  h-screen">
+      <APIFetch />
+      {/* <FileExplorer /> */}
+      {/* <TabsSection /> */}
       {/* <StopWatchSec /> */}
-      <Comments3 />
+      {/* <Comments3 /> */}
       {/* <Explorer2 /> */}
       {/* <Explorer /> */}
       {/* <CountDownTimer /> */}
