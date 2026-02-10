@@ -30,6 +30,9 @@ import FileExplorer from "./components/FileExplorer";
 import APIFetch from "./components/InterviewLevel/APIFetch";
 import PaginationSwiggy from "./components/InterviewLevel/PaginationSwiggy";
 import AutoCompleteSwiggy from "./components/InterviewLevel/AutoCompleteSwiggy";
+import ProgressBar from "./components/InterviewLevel/ProgressBar";
+import OTPInputSwiggy from "./components/InterviewLevel/OTPInputSwiggy";
+import SwiggyNestedChecbox from "./components/InterviewLevel/SwiggyNestedChecbox";
 
 // Todo with edit + delete
 
@@ -46,7 +49,10 @@ import AutoCompleteSwiggy from "./components/InterviewLevel/AutoCompleteSwiggy";
 const App = () => {
   return (
     <div className="w-full  h-screen">
-      <AutoCompleteSwiggy/>
+      <SwiggyNestedChecbox />
+      {/* <OTPInputSwiggy /> */}
+      {/* <ProgressBar /> */}
+      {/* <AutoCompleteSwiggy/> */}
       {/* <PaginationSwiggy/> */}
       {/* <APIFetch /> */}
       {/* <FileExplorer /> */}
