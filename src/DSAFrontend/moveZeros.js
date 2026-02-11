@@ -1,5 +1,5 @@
 // move every 0 at end
-// intuition ye hai ki agar non zero ho tb hi left bade and right hamesha bade hi abade
+// intuition ye hai ki agar non zero ho value loop me s[right] ki  tb hi left bade and right hamesha bade hi abade
 
 var moveZeroes = function (nums) {
   let left = 0;
