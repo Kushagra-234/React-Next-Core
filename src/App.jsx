@@ -1,88 +1,36 @@
-import Accordian from "./components/Accordian";
-import Comments from "./components/Comments";
-import CommentTree from "./components/CommentTree";
-import Counter from "./components/Counter";
-import InputBoxControlled from "./components/InputFilterList";
-import InputFilterList from "./components/InputFilterList";
-import AccordianSec from "./components/InterviewLevel/AccordianSec";
-import FormValidationSec from "./components/InterviewLevel/FormValidationSec";
-import InfiniteScroll from "./components/InterviewLevel/InfiniteScroll";
-import InputFilterListSec from "./components/InterviewLevel/InputFilterListSec";
-import OTPInputSec from "./components/InterviewLevel/OTPInputSec";
-// import PaginationSec from "./components/InterviewLevel/PaginationSec";
-import PaginationSec from "./components/InterviewLevel/InfiniteScroll";
-import RecuriveTreeDataAccoridan from "./components/InterviewLevel/RecuriveTreeDataAccoridan";
-import RecursiveTreeDataSec from "./components/InterviewLevel/RecursiveTreeDataSec";
-import StopWatchSec from "./components/InterviewLevel/StopWatchSec";
-import Paginated from "./components/Pagination";
-import RecursiveTree from "./components/RecursiveTree";
-import StopWatch from "./components/StopWatch";
-import TodoApp from "./components/Todo";
-import Nested from "./components/InterviewLevel/Nested";
-// import TodoList from "./components/Todo";
-import NestedCommentSec from "./components/NestedCommentSec";
-import CountDownTimer from "./components/CountDownTimer";
-import Explorer from "./components/Explorer";
-import Explorer2 from "./components/Explorer2";
-import Comments3 from "./components/Comments3";
-import TabsSection from "./components/InterviewLevel/TabsSection";
-import FileExplorer from "./components/FileExplorer";
-import APIFetch from "./components/InterviewLevel/APIFetch";
-import PaginationSwiggy from "./components/InterviewLevel/PaginationSwiggy";
-import AutoCompleteSwiggy from "./components/InterviewLevel/AutoCompleteSwiggy";
-import ProgressBar from "./components/InterviewLevel/ProgressBar";
-import OTPInputSwiggy from "./components/InterviewLevel/OTPInputSwiggy";
-import SwiggyNestedChecbox from "./components/InterviewLevel/SwiggyNestedChecbox";
+import React from "react";
+import AutoCompleteNaya from "./components/InterviewLevel/AutoCompleteNaya";
+import MultiStepFOrm from "./components/InterviewLevel/MultiStepFOrm";
+import DragDropList from "./components/InterviewLevel/DragDrop";
+import PaginationNewNaya from "./components/InterviewLevel/PaginationNewNaya";
+import InfiniteScrollNayaNew from "./components/InterviewLevel/InfiniteScrollNayaNew";
+import OTPbahutNaya from "./components/InterviewLevel/OTPbahutNaya";
+import TodoNew from "./components/InterviewLevel/TodoNew";
+import DataTable from "./components/InterviewLevel/DataTable";
+import DataTable2 from "./components/InterviewLevel/DataTable2";
+import CommentSystem from "./components/InterviewLevel/CommentSystem";
 
-// Todo with edit + delete
-
-// Search filter list
-
-// Pagination
-
-// Accordion
-
-// Nested comments
-
-// practise these 5
+const DATA = [
+  { id: 1, name: "Kushagra", age: 23, role: "Frontend" },
+  { id: 2, name: "Aman", age: 25, role: "Backend" },
+  { id: 3, name: "Neha", age: 22, role: "QA" },
+  { id: 4, name: "Rohit", age: 27, role: "DevOps" },
+  { id: 5, name: "Kunal", age: 24, role: "Frontend" },
+];
 
 const App = () => {
   return (
-    <div className="w-full  h-screen">
-      <SwiggyNestedChecbox />
-      {/* <OTPInputSwiggy /> */}
-      {/* <ProgressBar /> */}
-      {/* <AutoCompleteSwiggy/> */}
-      {/* <PaginationSwiggy/> */}
-      {/* <APIFetch /> */}
-      {/* <FileExplorer /> */}
-      {/* <TabsSection /> */}
-      {/* <StopWatchSec /> */}
-      {/* <Comments3 /> */}
-      {/* <Explorer2 /> */}
-      {/* <Explorer /> */}
-      {/* <CountDownTimer /> */}
-      {/* <NestedCommentSec /> */}
-      {/* <RecuriveTreeDataAccoridan /> */}
-      {/* <Nested /> */}
-      {/* <RecursiveTreeDataSec /> */}
-      {/* <OTPInputSec inputBox={6}/> */}
-      {/* <FormValidationSec /> */}
-      {/* <PaginationSec /> */}
-      {/* <InfiniteScroll/> */}
-      {/* <InputFilterListSec /> */}
-      {/* <AccordianSec /> */}
-      {/* hello */}
-      {/* <Counter /> */}
-      {/* <StopWatch /> */}
-      {/* <TodoApp /> */}
-      {/* <InputFilterList /> */}
-      {/* <InputBoxControlled /> */}
-      {/* <Paginated/> */}
-      {/* <Accordian /> */}
-      {/* <RecursiveTree /> */}
-      {/* <CommentTree /> */}
-      {/* <Comments /> */}
+    <div className="w-full h-screen">
+      <CommentSystem />
+      {/* <DataTable2 data={DATA} /> */}
+      {/* <DataTable /> */}
+      {/* <TodoNew /> */}
+      {/* <OTPbahutNaya /> */}
+      {/* <InfiniteScrollNayaNew/> */}
+      {/* <PaginationNewNaya /> */}
+      {/* <DragDropList /> */}
+      {/* <MultiStepFOrm /> */}
+      {/* <AutoCompleteNaya/> */}
     </div>
   );
 };
