@@ -1,0 +1,12 @@
+why not mutate directly 
+
+react relies on immutablity to detect chanegs if we mutate directly some changes can get skipped 
+React uses reference comparison, not deep comparison.
+
+⚠️ 3️⃣ Why avoid inline functions in JSX sometimes?
+har render pe naya refrence causing unnceesaary callling of children so it can create issues 
+
+
+Difference between useEffect cleanup and componentWillUnmount?
+componentWillUnmount only when component unmounts 
+useEffect cleanup when useEffect is being called again or component unmounts 

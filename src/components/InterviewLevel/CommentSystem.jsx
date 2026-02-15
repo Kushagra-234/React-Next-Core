@@ -137,3 +137,28 @@ const CommentInputNew = ({ comment, AddReply }) => {
     </div>
   );
 };
+
+item=[
+    {id:1,name:"",age:10},
+    {}
+]
+
+// /
+//  {
+const response =byids:{
+    id:{},
+    id:[]
+}
+
+const allids=["p1","p2"]
+
+
+const data =response[id]
+
+
+// 1- virtualization
+// 2- memoization using createSelector ye memoize krta hai returned values like filter and all pe 
+// 3- normazliation of response object kyuki abhi O(N) me ho rha hai fir O(1) me hogaa baad me 
+
+
+// Why shouldn’t we mutate state directly?
