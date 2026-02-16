@@ -1,0 +1,55 @@
+ // steps to create a scalable frontend app 
+
+ requirement gathering 
+1-  type of app (dashboard,SEO heavy,admin panel dashboard)
+2- scale of app (10k or 10 million)
+
+
+
+
+
+now steps 
+
+use of ISR,SSR,CSR,SSG on basis of requirement 
+1-highly interactive compoennt use CSR maybe intenral dashboard linked also use SSR
+2- fast page load initial and lot of server logic involeved like for product list page i will use SSR
+3- documentation and whitepapers link could use SSG
+4- data fetching compoennt using ISR with refetching again again 
+
+
+1- feature based component strutcure 
+like dashboard,products,checkout 
+
+aur components me inn sabke components UI logic split acrross for better radablity 
+
+server Logic -
+use of centralized api layer for all data fetching prefereably rtk 
+consistent use of loading,error,success states 
+this provides caching,invalidate tags and all itslef 
+
+segregation of code in if reusable 
+custom hooks 
+
+optimization techniques 
+lazy loading
+memoization only when required 
+virtualization in heavy data sets of table 
+accessiblity of user via input focus 
+consistent styling 
+image optimization 
+env config seperation sensivitve keys via server 
+
+
+fallbacks 
+suspense boundaries 
+error boundaries 
+
+security -
+HTTP only cookie 
+CSRF tokens for protection against CSRF attacks 
+no tokens in localstorage only http cookie
+
+maybe eslint,prettier for formatting and consistent 
+ 
+
+ sentry,logger for logging 

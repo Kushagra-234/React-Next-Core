@@ -9,6 +9,7 @@ import TodoNew from "./components/InterviewLevel/TodoNew";
 import DataTable from "./components/InterviewLevel/DataTable";
 import DataTable2 from "./components/InterviewLevel/DataTable2";
 import CommentSystem from "./components/InterviewLevel/CommentSystem";
+import Accordion from "./components/InterviewLevel/randomfix/AccoridanFIx";
 
 const DATA = [
   { id: 1, name: "Kushagra", age: 23, role: "Frontend" },
@@ -21,7 +22,8 @@ const DATA = [
 const App = () => {
   return (
     <div className="w-full h-screen">
-      <CommentSystem />
+      <Accordion />
+      {/* <CommentSystem />/ */}
       {/* <DataTable2 data={DATA} /> */}
       {/* <DataTable /> */}
       {/* <TodoNew /> */}

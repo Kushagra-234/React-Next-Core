@@ -138,22 +138,22 @@ const CommentInputNew = ({ comment, AddReply }) => {
   );
 };
 
-item=[
-    {id:1,name:"",age:10},
-    {}
-]
+// item=[
+//     {id:1,name:"",age:10},
+//     {}
+// ]
 
-// /
-//  {
-const response =byids:{
-    id:{},
-    id:[]
-}
+// // /
+// //  {
+// const response =byids:{
+//     id:{},
+//     id:[]
+// }
 
-const allids=["p1","p2"]
+// const allids=["p1","p2"]
 
 
-const data =response[id]
+// const data =response[id]
 
 
 // 1- virtualization
