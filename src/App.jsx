@@ -10,6 +10,7 @@ import DataTable from "./components/InterviewLevel/DataTable";
 import DataTable2 from "./components/InterviewLevel/DataTable2";
 import CommentSystem from "./components/InterviewLevel/CommentSystem";
 import Accordion from "./components/InterviewLevel/randomfix/AccoridanFIx";
+import CartSystem from "./components/InterviewLevel/CartSystem";
 
 const DATA = [
   { id: 1, name: "Kushagra", age: 23, role: "Frontend" },
@@ -22,7 +23,8 @@ const DATA = [
 const App = () => {
   return (
     <div className="w-full h-screen">
-      <Accordion />
+      <CartSystem />
+      {/* <Accordion /> */}
       {/* <CommentSystem />/ */}
       {/* <DataTable2 data={DATA} /> */}
       {/* <DataTable /> */}

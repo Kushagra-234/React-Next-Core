@@ -56,8 +56,8 @@ const DataTable = () => {
       />
 
       {/* Table */}
-      <table border="1">
-        <thead>
+      <table className="w-full" border="1">
+        <thead className="flex gap-5 justify-start">
           <tr>
             <th onClick={() => handleSort("name")}>Name</th>
             <th onClick={() => handleSort("age")}>Age</th>

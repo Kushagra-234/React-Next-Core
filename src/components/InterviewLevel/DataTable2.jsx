@@ -1,72 +1,86 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const DataTable2 = ({ data }) => {
   const [localData, setLocalData] = useState(data);
-  const [originalData, setOriginalData] = useState(data);
-  const [ascVal, setascVal] = useState(true);
+  const [ascVal, setAscVal] = useState(true);
   const [inputVal, setInputVal] = useState("");
-  // const /
-  const handleSort = () => {
-    const nayadata = [...localData];
-    console.log("hello");
-    if (ascVal == true) nayadata.sort((a, b) => a.name.localeCompare(b.name));
-    if (ascVal === false) nayadata.sort((a, b) => b.name.localeCompare(a.name));
-    setascVal(!ascVal);
 
-    console.log(nayadata);
-
-    setLocalData(nayadata);
-  };
-
-  const handleKeyDown = (e) => {
-    if (!inputVal) {
-      setLocalData(originalData);
+  // 🔥 FILTER (real-time)
+  useEffect(() => {
+    if (!inputVal.trim()) {
+      setLocalData(data);
       return;
     }
-    if (e.key === "Enter" && inputVal) {
-      const nayaFilterArr = localData.filter((item) => {
-        return item.name.toLowerCase().includes(inputVal.toLowerCase());
-      });
 
-      setLocalData(nayaFilterArr);
-    }
+    const filtered = data.filter((item) =>
+      item.name.toLowerCase().includes(inputVal.toLowerCase())
+    );
+
+    setLocalData(filtered);
+  }, [inputVal, data]);
+
+  // 🔥 SORT
+  const handleSort = () => {
+    const sorted = [...localData].sort((a, b) =>
+      ascVal ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name)
+    );
+
+    setLocalData(sorted);
+    setAscVal(!ascVal);
   };
+
   return (
-    <div className="flex justify-center w-full items-center flex-col gap-3 ">
-      <h3>Data Table</h3>
-      <div className="flex flex-col border-2 justify-center items-center w-[60%]">
-        <div className="flex w-full justify-between">
-          <div>FIlter</div>
+    <div className="flex justify-center w-full items-center flex-col gap-5">
+      <h3 className="text-xl font-bold">Data Table</h3>
+
+      <div className="flex flex-col border rounded shadow w-[60%] p-4 gap-4">
+        {/* FILTER */}
+        <div className="flex justify-between items-center">
+          <div className="font-semibold">Filter by Name:</div>
           <input
-            onKeyDown={(e) => handleKeyDown(e)}
+            value={inputVal}
             onChange={(e) => setInputVal(e.target.value)}
-            className="border-2"
+            className="border px-2 py-1 rounded"
+            placeholder="Search name..."
           />
         </div>
 
-        <table className="w-full  border-black">
-          <thead>
+        {/* TABLE */}
+        <table className="w-full border-collapse">
+          <thead className="bg-gray-200">
             <tr>
-              <th className="flex justify-start gap-3">
-                <div>Name</div>
-                <button onClick={() => handleSort()}>
-                  Sort {ascVal ? "asc" : "dsc"}
-                </button>
+              <th className="text-left p-2">
+                <div className="flex items-center gap-3">
+                  <span>Name</span>
+                  <button
+                    onClick={handleSort}
+                    className="border px-2 py-1 rounded text-sm"
+                  >
+                    Sort {ascVal ? "↑" : "↓"}
+                  </button>
+                </div>
               </th>
-              <th className="text-start">Age</th>
-              <th className="text-start">role</th>
+              <th className="text-left p-2">Age</th>
+              <th className="text-left p-2">Role</th>
             </tr>
           </thead>
+
           <tbody>
-            {localData.map((node) => {
-              return (
-                <tr key={node.id} style={{ textAlign: "start" }}>
-                  <td>{node.name}</td>
-                  <td>{node.age}</td>
-                  <td>{node.role}</td>
+            {localData.length === 0 ? (
+              <tr>
+                <td colSpan="3" className="text-center p-3 text-gray-500">
+                  No Data Found
+                </td>
+              </tr>
+            ) : (
+              localData.map((node) => (
+                <tr key={node.id} className="border-t hover:bg-gray-100">
+                  <td className="p-2">{node.name}</td>
+                  <td className="p-2">{node.age}</td>
+                  <td className="p-2">{node.role}</td>
                 </tr>
-              );
-            })}
+              ))
+            )}
           </tbody>
         </table>
       </div>

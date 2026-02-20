@@ -34,9 +34,14 @@ const AccordianSec = () => {
   const [openId, setOpenId] = useState<any[]>([]);
 
   const handleClick = (id) => {
-    setOpenId((prev) =>
-      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
-    );
+    const isTheir = openId.includes(id); // 👈 pehle variable bana liya
+
+    if (isTheir) {
+      const updated = openId.filter((p) => p.id !== id);
+      setOpenId(updated);
+    } else {
+      setOpenId([...openId, id]);
+    }
   };
   return (
     <div className="flex w-full h-full justify-center items-center flex-col gap-2">

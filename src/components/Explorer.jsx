@@ -90,7 +90,7 @@ const Explorer = () => {
       id: id,
       name: inputVal,
       type: type,
-      ...(type === "folder" ? { children: [] } : {}),
+      ...(type === "folder" ? {children:[]} : {})
     };
 
     setExplorerData((prev) => insertNode(prev, folderId, newNode));
@@ -124,3 +124,6 @@ const Explorer = () => {
 };
 
 export default Explorer;
+
+
+// comment system pe map nhi krna hai "explorer me  map krna hai "
