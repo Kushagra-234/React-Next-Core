@@ -11,6 +11,7 @@ import DataTable2 from "./components/InterviewLevel/DataTable2";
 import CommentSystem from "./components/InterviewLevel/CommentSystem";
 import Accordion from "./components/InterviewLevel/randomfix/AccoridanFIx";
 import CartSystem from "./components/InterviewLevel/CartSystem";
+import PromiseNaya from "./components/InterviewLevel/randomfix/PromiseNaya";
 
 const DATA = [
   { id: 1, name: "Kushagra", age: 23, role: "Frontend" },
@@ -23,7 +24,8 @@ const DATA = [
 const App = () => {
   return (
     <div className="w-full h-screen">
-      <CartSystem />
+      <PromiseNaya />
+      {/* <CartSystem /> */}
       {/* <Accordion /> */}
       {/* <CommentSystem />/ */}
       {/* <DataTable2 data={DATA} /> */}
