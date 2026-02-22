@@ -12,6 +12,7 @@ import CommentSystem from "./components/InterviewLevel/CommentSystem";
 import Accordion from "./components/InterviewLevel/randomfix/AccoridanFIx";
 import CartSystem from "./components/InterviewLevel/CartSystem";
 import PromiseNaya from "./components/InterviewLevel/randomfix/PromiseNaya";
+import InfiniteBugtest from "./components/InterviewLevel/randomfix/InfiniteBugtest";
 
 const DATA = [
   { id: 1, name: "Kushagra", age: 23, role: "Frontend" },
@@ -24,7 +25,8 @@ const DATA = [
 const App = () => {
   return (
     <div className="w-full h-screen">
-      <PromiseNaya />
+      <InfiniteBugtest />
+      {/* <PromiseNaya /> */}
       {/* <CartSystem /> */}
       {/* <Accordion /> */}
       {/* <CommentSystem />/ */}
