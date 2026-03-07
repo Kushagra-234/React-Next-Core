@@ -13,6 +13,7 @@ import Accordion from "./components/InterviewLevel/randomfix/AccoridanFIx";
 import CartSystem from "./components/InterviewLevel/CartSystem";
 import PromiseNaya from "./components/InterviewLevel/randomfix/PromiseNaya";
 import InfiniteBugtest from "./components/InterviewLevel/randomfix/InfiniteBugtest";
+import RecursiveRender from "./components/InterviewLevel/randomfix/RecursiveRender";
 
 const DATA = [
   { id: 1, name: "Kushagra", age: 23, role: "Frontend" },
@@ -25,7 +26,8 @@ const DATA = [
 const App = () => {
   return (
     <div className="w-full h-screen">
-      <InfiniteBugtest />
+      <RecursiveRender />
+      {/* <InfiniteBugtest /> */}
       {/* <PromiseNaya /> */}
       {/* <CartSystem /> */}
       {/* <Accordion /> */}
