@@ -41,3 +41,20 @@ const StopWatchSec = () => {
 };
 
 export default StopWatchSec;
+
+
+
+useEffect(()=>{
+  let timerId
+
+  isrunnung{
+    timerid= setTimeout(()=>{
+      settime
+    },delay)
+  }
+},[is])
+
+
+
+minutes =time/60
+seconds =time%60

@@ -9,10 +9,16 @@ const PromiseNaya = () => {
     reject("fail hua ");
   });
 
+  const resolvePromise = Promise.resolve("hey");
+
+  resolvePromise.then((res) => {
+    console.log(res);
+  });
+
   useEffect(() => {}, []);
 
   rejectPromise.then(
-    () => {},
+
     (err) => console.log(err)
   );
 
@@ -24,6 +30,3 @@ const PromiseNaya = () => {
 };
 
 export default PromiseNaya;
-
-
-

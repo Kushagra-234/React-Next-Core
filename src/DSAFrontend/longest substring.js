@@ -19,6 +19,8 @@
 // right=4
 // left=
 
+// intuution ye hai ki window maintain kro left,right ki daalte jao character map me and if you find it once then do left + with its value now starting from right index
+
 var lengthOfLongestSubstring = function (s) {
   let map = {};
   let left = 0;
@@ -37,3 +39,13 @@ var lengthOfLongestSubstring = function (s) {
 
   return maxVal;
 };
+
+function debounce(fn, delay) {
+  let timerId;
+
+  return function (...args) {
+    timerId = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}

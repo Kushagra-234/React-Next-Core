@@ -58,3 +58,14 @@ const AutoCompleteNaya = () => {
 };
 
 export default AutoCompleteNaya;
+
+useEffect(() => {
+  async function fetchData() {
+    try {
+      const response = await fetch("");
+      const jsonfied = await response.json();
+    } catch (e) {
+    } finally {
+    }
+  }
+});

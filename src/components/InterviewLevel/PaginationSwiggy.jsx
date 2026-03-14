@@ -63,7 +63,7 @@ const PaginationSwiggy = () => {
         {pages.map((i) => {
           return (
             <button
-                className={i === curPage ? "border-2 px-2" : ""}
+              className={i === curPage ? "border-2 px-2" : ""}
               onClick={() => setCurPage(i)}
             >
               {i}
@@ -93,3 +93,15 @@ const PaginationSwiggy = () => {
 };
 
 export default PaginationSwiggy;
+
+start = curPage - 1 * ITEMS_PER_PAGE;
+end = start + ITEMS_PER_PAGE;
+
+data.filter((item) => {
+  item.toLowerCase().includes(debouncedVal.toLowerCase());
+});
+
+
+// infinitescroll =>
+  
+
