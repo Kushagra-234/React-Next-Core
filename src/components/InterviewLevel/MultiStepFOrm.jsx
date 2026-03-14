@@ -159,3 +159,12 @@ const MultiStepFOrm = () => {
 };
 
 export default MultiStepFOrm;
+
+
+
+// valdiate {
+//   let temperros={}
+
+
+//   return Object.keys(temperros).length === 0 
+// }

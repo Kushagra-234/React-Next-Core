@@ -1,0 +1,22 @@
+to sun 
+reflow =>layput change mainly div width change or any lement height change to usse kitna parent shift kitna child shift ye wo calculate hoga 
+repaint=>when css properties or appearance of a elemtn changes
+compsite ->modern browser divided into frames compsoiting me browser sabko jodta hai for final thing 
+
+
+accesebluty in html means making ebpages in such a style that it is usable my everyone visually impared or even motor diablity 
+
+
+
+
+for eg 
+
+function debounce(inputtext,delay){
+    let timerId
+
+   timerid= setTimeout(()=>{
+    clearTimeout(timerid)
+    setInoputValue(inputtext)
+    },delay)
+}
+

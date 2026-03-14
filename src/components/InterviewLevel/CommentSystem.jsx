@@ -46,7 +46,7 @@ const CommentSystem = () => {
       replies: [],
     };
 
-    return setComment(insertNode(comment, commentId, newReply));
+    return setComment((prev)=>insertNode(prev, commentId, newReply));
   };
 
   const insertNode = (comment, commentId, newReply) => {

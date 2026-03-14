@@ -65,3 +65,23 @@ const OTPInputSwiggy = ({ onChangeOTP }) => {
 };
 
 export default OTPInputSwiggy;
+
+valueInut = e.target.value;
+
+const digit = valueInput[valueInput.length - 1];
+const nayaArray = [...otpInput];
+nayaArray[index] = digit;
+setOtpInput(nayaArray);
+
+if (digit && index < otpInput.length - 1) {
+  inputRef.current[index + 1].focus();
+}
+
+
+if(e.key === "Backspace" && !otpInput[index]){
+  inputRef.current[index-1].focus()
+}
+
+
+onChange={()=>handleChange(e.index)}
+ref={el=>inputRef.current[index]=el}

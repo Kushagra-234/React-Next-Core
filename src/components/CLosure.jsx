@@ -1,13 +1,24 @@
+// const outer = () => {
+//   var a = 1;
+
+//   const inner = () => {
+//     a++;
+//     console.log(a);
+//   };
+
+//   return inner;
+// };
+
+// const f1 = outer();
+// f1();
+
 const outer = () => {
-  var a = 1;
+  var a = 5;
 
-  const inner = () => {
-    a++;
-    console.log(a);
+  return function inner() {
+    return a;
   };
-
-  return inner;
 };
 
-const f1 = outer();
-f1();
+
+const f1=outer()

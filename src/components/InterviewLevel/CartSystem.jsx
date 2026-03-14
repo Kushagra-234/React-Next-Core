@@ -100,3 +100,5 @@ const CartSystem = () => {
 };
 
 export default CartSystem;
+
+const updatedItem = cartItem.find((p) => p.id === item.id);
