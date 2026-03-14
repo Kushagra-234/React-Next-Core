@@ -14,8 +14,9 @@
 // import PromiseNaya from "./components/InterviewLevel/randomfix/PromiseNaya";
 // import InfiniteBugtest from "./components/InterviewLevel/randomfix/InfiniteBugtest";
 // import RecursiveRender from "./components/InterviewLevel/randomfix/RecursiveRender";
+import CarNEWOutline from "./components/InterviewLevel/randomfix/CarNEWOutline";
 
-import { useLayoutEffect } from "react";
+// import { useLayoutEffect } from "react";
 
 // const DATA = [
 //   { id: 1, name: "Kushagra", age: 23, role: "Frontend" },
@@ -51,30 +52,42 @@ import { useLayoutEffect } from "react";
 
 // useLayoutEffect
 
-const HOC = (val) => {
-  return ({ children }) => {
-    useLayoutEffect(() => {
-      console.log(val);
-    }, []);
-    return children;
-  };
-};
-const A = HOC("A");
-const B = HOC("B");
-const C = HOC("C");
-const D = HOC("D");
-function App() {
+// const HOC = (val) => {
+//   return ({ children }) => {
+//     useLayoutEffect(() => {
+//       console.log(val);
+//     }, []);
+//     return children;
+//   };
+// };
+// const A = HOC("A");
+// const B = HOC("B");
+// const C = HOC("C");
+// const D = HOC("D");
+// function App() {
+//   return (
+//     <A>
+//       <B
+//         children={
+//           <C>
+//             <D />
+//           </C>
+//         }
+//       ></B>
+//     </A>
+//   );
+// }
+
+// export default App;
+
+import React from "react";
+
+const App = () => {
   return (
-    <A>
-      <B
-        children={
-          <C>
-            <D />
-          </C>
-        }
-      ></B>
-    </A>
+    <div className="w-full flex h-screen">
+      <CarNEWOutline />
+    </div>
   );
-}
+};
 
 export default App;
