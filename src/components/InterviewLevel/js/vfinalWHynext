@@ -1,0 +1,7 @@
+okay so as you know we are working on a web3 startup and i am asked this question agai n andagain why we used nextjs over plain reactjs 
+listen my answer and then tell me i am right or wrong 
+the reason why we went with nextjs over reactjs was that becuase of a web3 Dapp this involves highly asynchronous work and lot of dependencies so js bundle on client side was getting very heavy and we were not able to paint the screen first because of which FCP low and percieved as low performance bar nextjs solved our this problem we segregated wallet realted code in client components and moved other things like chain metadata,public configs on server side which reduced js bundle on client side incresing percieved performance and first meaninful render was fast also code splitting,api routes,file based routong helped
+
+
+
+
