@@ -1,0 +1,248 @@
+| Type                 | Memory Phase               |
+| -------------------- | -------------------------- |
+| function declaration | poora function store       |
+| var                  | undefined                  |
+| let                  | TDZ                        |
+| const                | TDZ                        |
+| arrow function       | undefined (var ke through) |
+
+
+console.log(a)
+
+var a = 5
+
+function a(){
+  console.log("hello")
+}
+
+memory creation phase 
+a- undefined 
+a - (){}
+
+in memory creation phase function overwrites variables so a is now ()=>{cosnoel.log("hello)}
+
+memory execrution me console,log a fn 
+
+
+
+Q2- function test(){
+
+ console.log(a)
+
+ var a = 10
+
+}
+
+test()
+
+
+memroy creation phase of GEC 
+pura test uthke memory me chala gya 
+now EC for test()
+
+memory creation 
+a->undefined 
+
+
+q3- var a = 1
+
+function b(){
+  console.log(a)
+}
+
+function c(){
+  var a = 10
+  b()
+}
+
+c()
+
+
+GEC 
+var a 
+b (){}
+c(){}
+
+now code execution phase 
+a=1 
+c()
+a
+b()
+
+
+
+event loop is a phenemenon which basically handles all the asynchronous operations in js as js is single threaded language it executes one task at a time in call stcak event loop checks if call stack is empty and pushes microtask work inside event loop 
+
+
+
+console.log(a)
+
+var a = 10
+
+function a(){
+  console.log("hello")
+}
+
+console.log(a)
+
+GEC memory reation phase 
+a(){}
+
+
+
+
+var a = 10
+
+function test(){
+  console.log(a)
+  var a = 20
+}
+
+test()
+
+a undfined 
+test(){
+console.log(a)
+var a=20
+}
+
+
+var a = 10
+
+function test(){
+  console.log(a)
+  let a = 20
+}
+
+test()
+
+# new 
+
+var a = 10
+
+function test(){
+  console.log(a)
+  a = 20
+  console.log(a)
+  var a = 30
+}
+
+test()
+
+
+a undeinfed 
+test(){
+console.log(a)
+a=20
+console.log(a)
+var a=30
+}
+
+test()
+
+undfined 20
+
+
+# next 
+
+var a = 10;
+
+function test() {
+  console.log(a);
+  a = 20;
+
+  function a() {}
+
+  console.log(a);
+}
+
+test();
+
+
+a undefined
+test()
+
+
+test(){
+ 
+}
+
+
+next 
+var a = 10;
+
+function test() {
+  console.log(a);
+  a = 20;
+
+  function a() {}
+
+  console.log(a);
+}
+
+test();
+
+a=undeifned 
+test(){
+a undeifned 
+a(){}
+}
+
+
+
+next 
+
+
+var a = 1;
+
+function test(){
+  console.log(a);
+
+  var a = 2;
+
+  function a(){}
+
+  console.log(a);
+}
+
+test();
+
+GEC 
+a= undefined 
+test(){
+
+}
+
+
+
+console.log(a);
+
+let a = 10;
+
+function test(){
+  console.log(b);
+  let b = 20;
+}
+
+test();
+
+
+
+a=undefined 
+test(){}
+
+undefined 
+refrenceError
+
+
+
+prmise is a object which represents state of async task which is being completed in future 
+
+
+promise is a object which represents state of async task which is being completed in future
+
+
+
+
+const newPromise = new Promise(()=>{
+})
