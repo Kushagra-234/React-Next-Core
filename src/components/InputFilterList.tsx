@@ -43,3 +43,32 @@ const InputBoxControlled = () => {
   );
 };
 export default InputBoxControlled;
+
+// const outer = (count) => {
+//   count++;
+
+//   return function inner() {
+//     console.log(count);
+//   };
+// };
+
+
+
+// const f= outer(6)()
+
+
+
+
+// let a = 10;
+
+// function test() {
+//   console.log(a);
+//   let a = 20;
+// }
+
+// test();
+
+
+
+// a
+// test()
