@@ -62,3 +62,27 @@ const InfiniteScrollbest = () => {
 };
 
 export default InfiniteScrollbest;
+
+function debounce(fn, delay) {
+  let timerId;
+  return function (...args) {
+    clearTimeout(timerId);
+    timerId = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+}
+
+function throttle(fn, delay) {
+  let isThrottling = false;
+
+  return function (...args) {
+    if (isThrottling) return;
+    fn.apply(this, args);
+    isThrottling = true;
+
+    setTimeout(() => {
+      isThrottling = false;
+    }, delay);
+  };
+}
