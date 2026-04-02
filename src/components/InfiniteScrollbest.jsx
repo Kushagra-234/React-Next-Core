@@ -86,3 +86,19 @@ function throttle(fn, delay) {
     }, delay);
   };
 }
+
+const arr = [1, 2, 2, 3, 4];
+
+function removeDuplicate(arr) {
+  let map = {};
+  let result = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (map[arr[i]] === undefined) {
+      map[arr[i]] = true;
+      result.push(arr[i]);
+    }
+  }
+
+  return result;
+}

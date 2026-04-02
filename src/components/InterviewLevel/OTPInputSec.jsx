@@ -48,3 +48,18 @@ const OTPInputSec = ({ inputBox }) => {
 };
 
 export default OTPInputSec;
+
+
+
+ref= {(el)=>inputRef.current[index]=el}
+
+const inputRef=useRef([])
+
+
+
+
+
+
+
+
+
