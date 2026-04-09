@@ -311,70 +311,70 @@ c1();
 // b();
 // a();
 
-function App() {
-  let count = 0;
+// function App() {
+//   let count = 0;
 
-  function handleClick() {
-    count++;
-    console.log(count);
-  }
+//   function handleClick() {
+//     count++;
+//     console.log(count);
+//   }
 
-  return <button onClick={handleClick}>Click</button>;
-}
+//   return <button onClick={handleClick}>Click</button>;
+// }
 
-function App() {
-  const [count, setCount] = useState(0);
+// function App() {
+//   const [count, setCount] = useState(0);
 
-  function handleClick() {
-    setCount(count + 1);
-    setCount(count + 1);
-    console.log(count);
-  }
+//   function handleClick() {
+//     setCount(count + 1);
+//     setCount(count + 1);
+//     console.log(count);
+//   }
 
-  return <button onClick={handleClick}>Click</button>;
-}
+//   return <button onClick={handleClick}>Click</button>;
+// }
 
-const increment = () => {
-  useCallback(() => {}, []);
-};
+// const increment = () => {
+//   useCallback(() => {}, []);
+// };
 
-const incrementNew = useCallback(() => {});
+// const incrementNew = useCallback(() => {});
 
-function App() {
-  const [count, setCount] = useState(0);
+// function App() {
+//   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      console.log(count);
-    }, 1000);
-  }, []);
+//   useEffect(() => {
+//     setTimeout(() => {
+//       console.log(count);
+//     }, 1000);
+//   }, []);
 
-  return <button onClick={() => setCount(count + 1)}>Click</button>;
-}
+//   return <button onClick={() => setCount(count + 1)}>Click</button>;
+// }
 
-function App() {
-  const [count, setCount] = useState(0);
+// function App() {
+//   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      console.log(count);
-    }, 1000);
-  }, [count]);
+//   useEffect(() => {
+//     setTimeout(() => {
+//       console.log(count);
+//     }, 1000);
+//   }, [count]);
 
-  return <button onClick={() => setCount(count + 1)}>Click</button>;
-}
+//   return <button onClick={() => setCount(count + 1)}>Click</button>;
+// }
 
-function App() {
-  const [count, setCount] = useState(0);
+// function App() {
+//   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    console.log("effect");
-  }, [count]);
+//   useEffect(() => {
+//     console.log("effect");
+//   }, [count]);
 
-  console.log("render");
+//   console.log("render");
 
-  return <button onClick={() => setCount(count + 1)}>Click</button>;
-}
+//   return <button onClick={() => setCount(count + 1)}>Click</button>;
+// }
 
 
 
@@ -384,14 +384,31 @@ function App() {
 
 
 
-function App() {
-    const [count, setCount] = useState(0);
+// function App() {
+//     const [count, setCount] = useState(0);
   
-    const handleClick = () => {
-      setTimeout(() => {
-        setCount(count + 1);
-      }, 1000);
-    };
+//     const handleClick = () => {
+//       setTimeout(() => {
+//         setCount(count + 1);
+//       }, 1000);
+//     };
   
-    return <button onClick={handleClick}>Click</button>;
-  }
+//     return <button onClick={handleClick}>Click</button>;
+//   }
+
+
+
+
+const newPromise = new Promise(()=>{
+
+})
+
+
+
+// middleware is a function which runs when request is about to be completed it sits at intersection of incoming requets and response 
+
+
+
+
+// getStaticPaths 
+// it is  used to creaate or prebuild dynamic pages 

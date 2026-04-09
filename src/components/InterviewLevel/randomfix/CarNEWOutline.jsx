@@ -28,6 +28,8 @@ const CarNEWOutline = () => {
     const updatedItem = cartValue.find((cartItem) => cartItem.id === item.id);
     // wo item hai merepaas yaani ek object
 
+    const updated2 = cartValue.find((itemNew) => item.id === itemNew.id);
+
     if (updatedItem) {
       const updatedCart = cartValue.map((itemCart) => {
         if (itemCart.id === item.id) {

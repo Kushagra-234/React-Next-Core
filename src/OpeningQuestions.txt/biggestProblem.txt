@@ -20,12 +20,3 @@ okay if multiple components call same query tb component A calls it and then sto
 
 
 
-const addreply(){
-    const newComment={
-        id:,
-        text:"",
-    }
-
-
-    setComment(insertNode(commentId,newReply))
-}

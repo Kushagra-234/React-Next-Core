@@ -48,3 +48,193 @@ const OTPInputSec = ({ inputBox }) => {
 };
 
 export default OTPInputSec;
+
+
+
+// ref= {(el)=>inputRef.current[index]=el}
+
+const inputRef=useRef([])
+
+
+
+
+
+
+
+
+
+
+
+
+
+const flattenArray = (arr) =>{
+   let results=[]
+
+   for(let item of arr){
+    if(Array.isArray(item)){
+      results=results.concat(flattenArray(item))
+    }else{
+      results.push(item)
+    }
+   }
+
+
+   return results;
+}
+
+
+
+for(let item of arr){
+  if(Array.isArray(item)){
+    results=results.concat(flattenArray(item))
+  }else{
+    results.push(item)
+  }
+}
+
+
+
+Array.prototype.myMap = function (cb){
+  let results=[]
+
+  for(let i=0;i<this.length;i++){
+    results.push(cb(this[i],i,this ))
+  }
+}
+
+
+Array.prototype.myFilter= function(cb){
+  let results=[]
+
+
+  for(let i=0;i<this.length;i++){
+    if(cb(this[i],i,this)){
+      results.push(this[i])
+    }
+  }
+}
+
+
+
+Array.prototype.myReduce = function(cb,initialVal){
+
+  let acc= initialVal !== undefined ? initialVal : this[0]
+  let start =initialVal !== undefined ? 0:1
+
+  for(let i=start;i<this.length;i++){
+    acc= cb(acc,this[i],i,this)
+  }
+
+  return acc;
+
+}
+
+
+
+
+
+Array.prototype.myMpa= function(cb){
+  let result=[]
+
+  for(let i=0;i<this.length;i++){
+    result.push(cb(this[i],i,this))
+  }
+
+  return result 
+}
+
+
+
+Array.prototype.myfilter= function(cb){
+  let result=[]
+
+  for(let i=0;i<this.length;i++){
+    if(cb(this[i],i,this))
+    result.push(this[i])
+  }
+
+  return result 
+}
+
+
+Array.prototype.myreduce = function(cb,initialVal){
+  let acc= initialVal !== undefined ? initialVal : this[0]
+  let start =initialVal !== undefined ? 0 : 1
+
+
+  for(let i=start;i<this.length;i++){
+    acc= cb(acc,this[i],i,this)
+  }
+  return acc
+}
+
+
+
+function debounce (fn,delay){
+  let timerId;
+  return function(...args){
+    clearTimeout(timerId)
+
+    timerId = setTimeout(()=>{
+    
+
+      fn.apply(this,args)
+    },delay)
+
+  }
+}
+
+
+
+
+
+function throttle(fn,delay){
+ let isThrottled= false
+
+ return function(...args){
+  if(isThrottled)return
+
+  fn.apply(this,args)
+
+  isThrottled=true
+
+  setTimeout(()=>{
+    isThrottled = false
+
+  },delay)
+ }
+}
+
+
+[]
+
+function myPromiseAll(promises){
+  return new Promise((resolve,reject)=>{
+
+    let results=[]
+    let completed=0
+
+    if(promises.length === 0){
+      resolve([])
+    }
+
+
+    promises.forEach((promise,index)=>{
+      Promise.resolve(promise).then((val)=>{
+        results[index]=val
+        completed ++ 
+
+
+        if(completed.length === promises.length){
+          resolve(results)
+        }
+
+      }).catch((e)=>{
+        console.log(e)
+
+      })
+
+    })
+
+  })
+}
