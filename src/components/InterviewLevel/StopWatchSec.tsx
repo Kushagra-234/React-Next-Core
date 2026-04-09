@@ -58,3 +58,17 @@ useEffect(()=>{
 
 minutes =time/60
 seconds =time%60
+
+
+
+
+
+useEffect(()=>{
+  let timerId;
+
+
+timerid= setTimeout(()=>{
+  setTimeout(time+1)
+},1000)
+
+})

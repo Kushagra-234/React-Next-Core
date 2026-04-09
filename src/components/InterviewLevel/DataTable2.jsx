@@ -96,3 +96,12 @@ export default DataTable2;
 // table 
 //  thead   tr  <th>
 // / tbody <tr> <td>
+
+
+{/* <TracingChannel
+<thead>
+<tbody></tbody></thead>
+
+
+<tr><th></th></tr>
+<tr></tr> */}
