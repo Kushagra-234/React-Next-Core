@@ -102,3 +102,30 @@ function removeDuplicate(arr) {
 
   return result;
 }
+
+const PromiseAllPolyfill = (promises) => {
+  return new Promise((resolve, reject) => {
+    let results = [];
+    let completed = 0;
+
+    if (promises.length === 0) {
+      resolve([]);
+      return;
+    }
+
+    promises.forEach((item, index) => {
+      Promise.resolve(item)
+        .then((res) => {
+          results[index] = res;
+          completed++;
+
+          if (completed === promises.length) {
+            resolve(results);
+          }
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  });
+};

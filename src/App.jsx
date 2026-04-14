@@ -96,13 +96,15 @@ import ToastNotification from "./components/InterviewLevel/ToastNotification";
 import { ToastProvider } from "./components/InterviewLevel/ToastContext";
 import ThemeShower from "./components/InterviewLevel/ThemeShower";
 import { ThemeProvider } from "./components/InterviewLevel/ThemeContext";
+import StopTimerWatch from "./components/StopTimerWatch";
 
 const App = () => {
   return (
     <div className="w-full flex h-screen">
-      <ThemeProvider>
+      <StopTimerWatch />
+      {/* <ThemeProvider>
         <ThemeShower />
-      </ThemeProvider>
+      </ThemeProvider> */}
       {/* <ToastProvider>
         <ToastNotification />
       </ToastProvider> */}
