@@ -1,3 +1,5 @@
+import { useCallback } from "react";
+
 const obj = {
   a: 1,
   b: {
@@ -39,3 +41,17 @@ const flattenViaParent = (obj, prefix) => {
 
   return result
 };
+
+
+
+
+
+
+
+// const fn = () => console.log("hi");
+const fn = useCallback(()=>{
+  console.log("hi")
+
+},[])
+
+<Child onClick={fn} />
