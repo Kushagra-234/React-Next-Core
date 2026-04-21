@@ -42,14 +42,16 @@ function retYu() {
       <thead>
         <tr>
           {table.columns.map((item) => {
-            return item.ksy;
+            return item.key;
           })}
         </tr>
       </thead>
       <tbody>
         <tr>
           {table.data.map((row) => {
-            return <td></td>;
+            return table.columns.map((itemcol)=>{
+                return <td>{row[itemcol.key]}</td>
+            })
           })}
           <td></td>
         </tr>
