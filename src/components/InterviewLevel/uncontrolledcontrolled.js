@@ -91,3 +91,25 @@ function flattenArr(arr) {
 
   return result;
 }
+
+// HOC
+
+// a function  takes in a component and returns a component
+
+const withAuth = (wrappedComponent) => {
+  return function (...props) {
+    const isAuthenticated = false;
+
+    if (!isAuthenticated) {
+      return <h2>Login to continue</h2>;
+    }
+
+    return <wrappedComponent {...props} />;
+  };
+};
+
+const Dashboard = () => {
+  return <div>Hey</div>;
+};
+
+export default withAuth(Dashboard);
