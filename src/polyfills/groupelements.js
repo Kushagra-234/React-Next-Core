@@ -1,59 +1,59 @@
-// const obj = [
-//   { key: "Sample 1", data: "Data1" },
-//   { key: "Sample 1", data: "Data1" },
-//   { key: "Sample 2", data: "Data2" },
-//   { key: "Sample 1", data: "Data1" },
-//   { key: "Sample 3", data: "Data1" },
-//   { key: "Sample 4", data: "Data1" },
-// ];
+const obj = [
+  { key: "Sample 1", data: "Data1" },
+  { key: "Sample 1", data: "Data1" },
+  { key: "Sample 2", data: "Data2" },
+  { key: "Sample 1", data: "Data1" },
+  { key: "Sample 3", data: "Data1" },
+  { key: "Sample 4", data: "Data1" },
+];
 
 const { useRef, useCallback, useEffect } = require("react");
 
-// const output = {
-//   "Sample 1": [
-//     { key: "Sample 1", data: "Data1" },
-//     { key: "Sample 1", data: "Data1" },
-//     { key: "Sample 1", data: "Data1" },
-//   ],
-//   "Sample 2": [{ key: "Sample 2", data: "Data2" }],
-//   "Sample 3": [{ key: "Sample 3", data: "Data1" }],
-//   "Sample 4": [{ key: "Sample 4", data: "Data1" }],
-// };
+const output = {
+  "Sample 1": [
+    { key: "Sample 1", data: "Data1" },
+    { key: "Sample 1", data: "Data1" },
+    { key: "Sample 1", data: "Data1" },
+  ],
+  "Sample 2": [{ key: "Sample 2", data: "Data2" }],
+  "Sample 3": [{ key: "Sample 3", data: "Data1" }],
+  "Sample 4": [{ key: "Sample 4", data: "Data1" }],
+};
 
-// // approach obj pe loop kro and uthao key
-// // key me daalo
+// approach obj pe loop kro and uthao key
+// key me daalo
 
-// function groupbykeys(obj) {
-//   let result = {};
+function groupbykeys(obj) {
+  let result = {};
 
-//   for (item of obj) {
-//     if (!result[item.key]) {
-//       result[item.key] = [];
-//     }
-//     result[item.key].push(item);
-//   }
+  for (item of obj) {
+    if (!result[item.key]) {
+      result[item.key] = [];
+    }
+    result[item.key].push(item);
+  }
 
-//   return result;
-// }
+  return result;
+}
 
-// const arr1 = [1, 2, (3)[(32, 45, 64)]];
+const arr1 = [1, 2, (3)[(32, 45, 64)]];
 
-// const flattenedArr = [1, 2, 3, 32, 45, 64];
+const flattenedArr = [1, 2, 3, 32, 45, 64];
 
-// function flattenArray(arr) {
-//   let result = [];
+function flattenArray(arr) {
+  let result = [];
 
-//   for (let item of arr) {
-//     if (Array.isArray(item)) {
-//       const res = flattenArray(item);
-//       result.push(...res);
-//     } else {
-//       result.push(item);
-//     }
-//   }
+  for (let item of arr) {
+    if (Array.isArray(item)) {
+      const res = flattenArray(item);
+      result.push(...res);
+    } else {
+      result.push(item);
+    }
+  }
 
-//   return result;
-// }
+  return result;
+}
 
 function computeAccount() {
   function lakhs(n) {
@@ -74,7 +74,7 @@ function computeAccount() {
 
 console.log(computeAccount().lakhs(200));
 
-var obj = {
+var objNew = {
   helloworld: function () {
     return "hello world " + this.name;
   },
@@ -82,7 +82,7 @@ var obj = {
 };
 
 var obj2 = {
-  helloworld: obj.helloworld,
+  helloworld: objNew.helloworld,
   name: "Bye",
 };
 
