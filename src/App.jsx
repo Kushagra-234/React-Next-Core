@@ -99,11 +99,13 @@ import { ThemeProvider } from "./components/InterviewLevel/ThemeContext";
 import StopTimerWatch from "./components/StopTimerWatch";
 import RefComponent from "./components/InterviewLevel/js/RefComponent";
 import MovingGame from "./components/InterviewLevel/MovingGame";
+import DummyTodo from "./components/InterviewLevel/DummyTodo";
 
 const App = () => {
   return (
     <div className="w-full flex h-screen">
-      <MovingGame />
+      <DummyTodo />
+      {/* <MovingGame /> */}
       {/* <RefComponent /> */}
       {/* <StopTimerWatch /> */}
       {/* <ThemeProvider>
