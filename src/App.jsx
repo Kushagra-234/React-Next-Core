@@ -14,7 +14,7 @@
 // import PromiseNaya from "./components/InterviewLevel/randomfix/PromiseNaya";
 // import InfiniteBugtest from "./components/InterviewLevel/randomfix/InfiniteBugtest";
 // import RecursiveRender from "./components/InterviewLevel/randomfix/RecursiveRender";
-import CarNEWOutline from "./components/InterviewLevel/randomfix/CarNEWOutline";
+// import CarNEWOutline from "./components/InterviewLevel/randomfix/CarNEWOutline";
 
 // import { useLayoutEffect } from "react";
 
@@ -80,31 +80,36 @@ import CarNEWOutline from "./components/InterviewLevel/randomfix/CarNEWOutline";
 
 // export default App;
 
-import React from "react";
-import RecuriveListRender from "./components/InterviewLevel/randomfix/RecuriveListRender";
-import UsersVsCode from "./components/InterviewLevel/randomfix/UsersVsCode";
-import ArrayRender from "./components/InterviewLevel/randomfix/ArrayRender";
-import ProductFix from "./components/InterviewLevel/randomfix/ProductFix";
-import GoogleKeep from "./components/InterviewLevel/randomfix/GoogleKeep";
-import UsersManagementDashboard from "./components/InterviewLevel/randomfix/UsersManagementDashboard";
-import NewDAccrodian from "./components/NewDAccrodian";
-import TODObest from "./components/TODObest";
-import InputSearchbest from "./components/InputSearchbest";
-import PaginationBest from "./components/PaginationBest";
-import InfiniteScrollbest from "./components/InfiniteScrollbest";
-import ToastNotification from "./components/InterviewLevel/ToastNotification";
-import { ToastProvider } from "./components/InterviewLevel/ToastContext";
-import ThemeShower from "./components/InterviewLevel/ThemeShower";
-import { ThemeProvider } from "./components/InterviewLevel/ThemeContext";
-import StopTimerWatch from "./components/StopTimerWatch";
-import RefComponent from "./components/InterviewLevel/js/RefComponent";
-import MovingGame from "./components/InterviewLevel/MovingGame";
-import DummyTodo from "./components/InterviewLevel/DummyTodo";
+// import React from "react";
+// import RecuriveListRender from "./components/InterviewLevel/randomfix/RecuriveListRender";
+// import UsersVsCode from "./components/InterviewLevel/randomfix/UsersVsCode";
+// import ArrayRender from "./components/InterviewLevel/randomfix/ArrayRender";
+// import ProductFix from "./components/InterviewLevel/randomfix/ProductFix";
+// import GoogleKeep from "./components/InterviewLevel/randomfix/GoogleKeep";
+// import UsersManagementDashboard from "./components/InterviewLevel/randomfix/UsersManagementDashboard";
+// import NewDAccrodian from "./components/NewDAccrodian";
+// import TODObest from "./components/TODObest";
+// import InputSearchbest from "./components/InputSearchbest";
+// import PaginationBest from "./components/PaginationBest";
+// import InfiniteScrollbest from "./components/InfiniteScrollbest";
+// import ToastNotification from "./components/InterviewLevel/ToastNotification";
+// // import { ToastProvider } from "./components/InterviewLevel/ToastContext";
+// import ThemeShower from "./components/InterviewLevel/ThemeShower";
+// import { ThemeProvider } from "./components/InterviewLevel/ThemeContext";
+// import StopTimerWatch from "./components/StopTimerWatch";
+// import RefComponent from "./components/InterviewLevel/js/RefComponent";
+// import MovingGame from "./components/InterviewLevel/MovingGame";
+// import DummyTodo from "./components/InterviewLevel/DummyTodo";
+import ToastNew from "./components/ToastNew";
+import ToastProvider from "./components/ToastProvider";
 
 const App = () => {
   return (
     <div className="w-full flex h-screen">
-      <DummyTodo />
+      <ToastProvider>
+        <ToastNew />
+      </ToastProvider>
+      {/* <DummyTodo /> */}
       {/* <MovingGame /> */}
       {/* <RefComponent /> */}
       {/* <StopTimerWatch /> */}
