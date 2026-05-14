@@ -10,3 +10,35 @@ Array.prototype.myMap = function (cb) {
 
   return temp;
 };
+
+const nayaProm = new Promise((resolve, reject) => {
+  resolve("Hey");
+});
+
+nayaProm.then(() => {});
+
+// promisify
+function fetchData(callback) {
+  setTimeout(() => {
+    callback(null, "Data received");
+  }, 1000);
+}
+
+const promisedFetch = promisify(fetchData);
+
+promisedFetch()
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));
+
+function promisify(fn) {
+  return function (...args) {
+    return new Promise((resolve, reject) => {
+      fn(...args, (err, data) => {
+        if (err) {
+          reject(err);
+        }
+        resolve(data);
+      });
+    });
+  };
+}
