@@ -199,3 +199,6 @@ Array.prototype.myReduce = function (cb, initialVal) {
 };
 
 
+
+// inrtnally rtk ek cache key maintain krta hai which is obtained via endpoint and query params 
+// selectfrom result me ham specific data rkh skte hai only specific data we can keep jiske change hone se re-render pade otherwise naa pade 
