@@ -100,14 +100,16 @@
 // import RefComponent from "./components/InterviewLevel/js/RefComponent";
 // import MovingGame from "./components/InterviewLevel/MovingGame";
 // import DummyTodo from "./components/InterviewLevel/DummyTodo";
+import CryptoDashboard from "./components/Crypto";
 import ToastNew from "./components/ToastNew";
 import ToastProvider from "./components/ToastProvider";
 import Trello from "./components/Trello";
 
 const App = () => {
   return (
-    <div className="w-full flex h-screen">
-      <Trello />
+    <div className="w-full flex">
+      <CryptoDashboard />
+      {/* <Trello /> */}
       {/* <ToastProvider>
         <ToastNew />
       </ToastProvider> */}
