@@ -101,14 +101,18 @@
 // import MovingGame from "./components/InterviewLevel/MovingGame";
 // import DummyTodo from "./components/InterviewLevel/DummyTodo";
 import CryptoDashboard from "./components/Crypto";
+import CryptoWebSocket from "./components/CryptoWebSocket";
+import CryptoWebSocketNew from "./components/CryptoWebSocketNew";
 import ToastNew from "./components/ToastNew";
 import ToastProvider from "./components/ToastProvider";
 import Trello from "./components/Trello";
 
 const App = () => {
   return (
-    <div className="w-full flex">
-      <CryptoDashboard />
+    <div className="w-full h-screen flex">
+      <CryptoWebSocketNew />
+      {/* <CryptoWebSocket /> */}
+      {/* <CryptoDashboard /> */}
       {/* <Trello /> */}
       {/* <ToastProvider>
         <ToastNew />
