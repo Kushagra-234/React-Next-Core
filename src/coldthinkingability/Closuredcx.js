@@ -59,7 +59,8 @@
 // obj.arrow();
 
 // const obj1= obj.normal
-// obj()
+// obj1()
+// undefined
 
 // const obj2 = obj1.arrow
 // obj2()
@@ -80,37 +81,98 @@
 // console.log(obj1.x);
 // console.log(obj2.x);
 
-let array1 = [1, 2, 3, 4];
+// let array1 = [1, 2, 3, 4];
 
-const arr2 = array1.reduce((item, acc) => {
-  return item + acc;
-});
+// const arr2 = array1.reduce((item, acc) => {
+//   return item + acc;
+// });
 
-console.log(arr2);
+// console.log(arr2);
 
-Array.prototype.myReduce = function (cb, initialValue) {
-  let acc = initialValue ? initialValue : this[0];
-  let start = initialValue ? 0 : 1;
+// Array.prototype.myReduce = function (cb, initialValue) {
+//   let acc = initialValue ? initialValue : this[0];
+//   let start = initialValue ? 0 : 1;
 
-  for (let i = start; i < this.length; i++) {
-    acc = cb(acc, this[i], i, this);
-  }
+//   for (let i = start; i < this.length; i++) {
+//     acc = cb(acc, this[i], i, this);
+//   }
 
-  return acc;
+//   return acc;
+// };
+
+// function throttle(fn, delay) {
+//   let isThrottled = false;
+
+//   return function (...args) {
+//     if (isThrottled) return;
+
+//     fn.apply(this, args);
+
+//     isThrottled = true;
+
+//     setTimeout(() => {
+//       isThrottled = false;
+//     }, delay);
+//   };
+// }
+
+// let arr = [1, (2)[(4, [4, 31])]];
+
+// const flattenArray = (arr) => {
+//   let result = [];
+
+//   for (let item of arr) {
+//     if (Array.isArray(item)) {
+//       let resNew = flattenArray(item);
+//       result.push(...resNew);
+//     } else result.push(item);
+//   }
+// };
+
+const obj = {
+  name: "Kush",
+  address: {
+    city: "Delhi",
+    state: "UP",
+  },
+  social: {
+    github: {
+      username: "kush123",
+    },
+  },
 };
 
-function throttle(fn, delay) {
-  let isThrottled = false;
+res = {
+  name: "Kush",
+  "address.city": "Delhi",
+  "address.state": "UP",
+  "social.github.username": "kush123",
+};
 
-  return function (...args) {
-    if (isThrottled) return;
+const flattenOBj = (obj) => {
+  let res = {};
+  let parent = "";
 
-    fn.apply(this, args);
+  flattenUtility(obj, "", res);
 
-    isThrottled = true;
+  return res;
+};
 
-    setTimeout(() => {
-      isThrottled = false;
-    }, delay);
-  };
-}
+const flattenUtility = (obj, parent, res) => {
+  for (let item in obj) {
+    let value = obj[item];
+    let newKey = parent ? `${parent}.${item}` : item;
+
+    if (typeof value !== "object" || value === null) {
+      res[newKey] = value;
+    }
+
+    if (Array.isArray(value)) {
+      flattenUtility(value, newKey, res);
+    }
+
+    if (typeof value === "object") {
+      flattenUtility(value, newKey, res);
+    }
+  }
+};
