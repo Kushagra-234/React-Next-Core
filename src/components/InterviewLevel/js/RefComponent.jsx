@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 const RefComponent = () => {
   const initialValue = 1;
@@ -43,5 +43,54 @@ const useDebounce = (fn, delay) => {
     [fn, delay]
   );
 
-  return debouncedFunction
+  return debouncedFunction;
 };
+
+// previous value nikaal ke do
+
+const usePrevious = (value) => {
+  const valueRef = useRef();
+
+  useEffect(() => {
+    valueRef.current = value;
+  }, [value]);
+
+  return valueRef.current;
+};
+
+
+
+
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 0);
+}
+
+
+
+for(var i=0;i<3,i++){
+  function incrementCount(value){
+    setTimeout(()=>{
+      console.log(value)
+    },0)
+  
+  }
+   incrementCount(i)
+}
+
+
+Array.prototype.myReduce = function (cb, initialValue) {
+  // implement
+};
+
+
+let array1= [1,2,3,4]
+
+const arr2= array1.reduce((item,acc)=>{
+  return item+acc
+
+})
+
+console.log(arr2)
