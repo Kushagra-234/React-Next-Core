@@ -103,6 +103,7 @@
 import CryptoDashboard from "./components/Crypto";
 import CryptoWebSocket from "./components/CryptoWebSocket";
 import CryptoWebSocketNew from "./components/CryptoWebSocketNew";
+import Attlasiantrello from "./components/InterviewLevel/attlasiantrello";
 import ProgressBarNaya from "./components/InterviewLevel/ProgressBarNaya";
 import ToastNew from "./components/ToastNew";
 import ToastProvider from "./components/ToastProvider";
@@ -111,7 +112,8 @@ import Trello from "./components/Trello";
 const App = () => {
   return (
     <div className="w-full h-screen flex">
-      <ProgressBarNaya/>
+      <Attlasiantrello />
+      {/* <ProgressBarNaya/> */}
       {/* <CryptoWebSocketNew /> */}
       {/* <CryptoWebSocket /> */}
       {/* <CryptoDashboard /> */}
