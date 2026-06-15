@@ -103,7 +103,8 @@
 import CryptoDashboard from "./components/Crypto";
 import CryptoWebSocket from "./components/CryptoWebSocket";
 import CryptoWebSocketNew from "./components/CryptoWebSocketNew";
-import Attlasiantrello from "./components/InterviewLevel/attlasiantrello";
+// import Attlasiantrello from "./components/InterviewLevel/attlasiantrello";
+import Employeemanagement from "./components/InterviewLevel/piyushgoyal FE machine/Employeemanagement";
 import ProgressBarNaya from "./components/InterviewLevel/ProgressBarNaya";
 import ToastNew from "./components/ToastNew";
 import ToastProvider from "./components/ToastProvider";
@@ -112,7 +113,8 @@ import Trello from "./components/Trello";
 const App = () => {
   return (
     <div className="w-full h-screen flex">
-      <Attlasiantrello />
+      <Employeemanagement />
+      {/* <Attlasiantrello /> */}
       {/* <ProgressBarNaya/> */}
       {/* <CryptoWebSocketNew /> */}
       {/* <CryptoWebSocket /> */}
